@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Credit Card Form</title>
+
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div id="shipping_panel" class=" shipping-panel container grid u-marginBottom16gu">
+		<div class="cart-container">
+			<div class="cart" id="order_summary">
+				<div id="item-list" class="item-list">
+					<!-- shoppingCart.js -->
+				</div>
+				<div id="total-price" class="total-price">
+					<!-- And here -->
+				</div>
+			</div>
+
+			<div class="summary-container">
+				<div class="card-wrapper">
+					<div class="card-front">
+						<label class="number" for="cardNumber" id='item_card_number'>
+							#### #### #### ####
+						</label>
+						<label class="name" for="cardHolder" id='item_card_holder_name'>
+							YOUR NAME
+						</label>
+						<label class="expiry" for="expiryMonth" id='item_expDate'>
+							mm/yy
+						</label>
+						<div class="chip">
+							<svg role="img" viewBox="0 0 100 100" aria-label="Chip">
+								<use href="#chip-lines" />
+							</svg>
+						</div>
+						<svg class="contactless" role="img" viewBox="0 0 24 24" aria-label="Contactless">
+							<use href="#contactless">
+						</svg>
+
+						<svg id="chip">
+							<g id="chip-lines">
+								<polyline points="0,50 35,50"></polyline>
+								<polyline points="0,20 20,20 35,35"></polyline>
+								<polyline points="50,0 50,35"></polyline>
+								<polyline points="65,35 80,20 100,20"></polyline>
+								<polyline points="100,50 65,50"></polyline>
+								<polyline points="35,35 65,35 65,65 35,65 35,35"></polyline>
+								<polyline points="0,80 20,80 35,65"></polyline>
+								<polyline points="50,100 50,65"></polyline>
+								<polyline points="65,65 80,80 100,80"></polyline>
+							</g>
+						</svg>
+
+						<svg id="contactless">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+							<path d="M9.172 15.172a4 4 0 0 1 5.656 0"></path>
+							<path d="M6.343 12.343a8 8 0 0 1 11.314 0"></path>
+							<path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0"></path>
+						</svg>
+					</div>
+
+					<div class="card-fields card-fields-1">
+						<label class="custom-field">
+							<input type="text" id="card_holder_name" name="card_holder_name" required placeholder=" "
+								oninput='handleCardChange(event)' />
+							<span class="placeholder">Name on Card</span>
+						</label>
+
+						<label class="custom-field">
+							<input type="text" id="email_address" name="email_address" placeholder=" ">
+							<span class="placeholder">Email</span>
+						</label>
+					</div>
+
+					<div class='separator'></div>
+
+					<div class="card-fields card-fields-2">
+						<label class="custom-field">
+							<input type="text" id="card_number" required placeholder=" " oninput='handleCardChange(event)' />
+							<span class="placeholder">Card Number</span>
+						</label>
+						<label class="custom-field">
+							<input type="text" id="expDate" required placeholder=" " oninput='handleCardChange(event)' />
+							<span class="placeholder">Expiry</span>
+						</label>
+						<label class="custom-field">
+							<input type="text" id="card_cvv" required placeholder=" " oninput='handleCardChange(event)' />
+							<span class="placeholder">CVV</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="grid__col grid__col-md--4 billing-address">
+					<h5>Billing Address</h5>
+
+					<label class="custom-field">
+						<input type="text" id="billing_street_address" name="billing_street_address" placeholder=" " required>
+						<span class="placeholder"><i class="fa fa-address-card-o"></i> Address</span>
+					</label>
+
+					<label class="custom-field">
+						<input type="text" id="billing_city" name="billing_city" placeholder=" " required>
+						<span class="placeholder"><i class="fa fa-institution"></i>City</span>
+					</label>
+
+					<label class="custom-field">
+						<input type="text" id="billing_state" name="billing_state" placeholder=" " required />
+						<span class="placeholder">State</span>
+					</label>
+
+					<label class="custom-field">
+						<input type="text" id="zipcode" name="zipcode" placeholder=" " required>
+						<span class="placeholder">Zip Code</span>
+					</label>
+				</div>
+				<div class="grid__col grid__col-md--12 same-address">
+					\
+				</div>
+			</div>
+		</div>
+
+		<script src=' /js/main.js'></script>
+</body>
+
+</html>
